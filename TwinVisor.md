@@ -1,5 +1,5 @@
 # TwinVisor Prototype
-参考，以下为在Ubuntu 20.04上的复现流程。
+参考[github TwinVisor](https://github.com/TwinVisor/twinvisor-prototype)，以下为在Ubuntu 20.04上的复现流程。
 
 ---
 

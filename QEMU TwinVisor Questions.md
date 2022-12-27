@@ -51,30 +51,30 @@ qemu-system-aarch64 -nographic \
 	-bios flash.bin \
 	-d int -D ./test.txt
 ```
-> 最终卡在BL31->BL32
-> NOTICE:  Booting Trusted Firmware
-> NOTICE:  BL1: v2.5(release):ca4f1fc
-> NOTICE:  BL1: Built : 22:04:20, Dec 25 2022
-> NOTICE:  BL1: Booting BL2
-> NOTICE:  BL2: v2.5(release):ca4f1fc
-> NOTICE:  BL2: Built : 22:04:20, Dec 25 2022
-> NOTICE:  BL1: Booting BL31
-> NOTICE:  BL31: v2.5(release):ca4f1fc
+> 最终卡在BL31->BL32\
+> NOTICE:  Booting Trusted Firmware\
+> NOTICE:  BL1: v2.5(release):ca4f1fc\
+> NOTICE:  BL1: Built : 22:04:20, Dec 25 2022\
+> NOTICE:  BL1: Booting BL2\
+> NOTICE:  BL2: v2.5(release):ca4f1fc\
+> NOTICE:  BL2: Built : 22:04:20, Dec 25 2022\
+> NOTICE:  BL1: Booting BL31\
+> NOTICE:  BL31: v2.5(release):ca4f1fc\
 > NOTICE:  BL31: Built : 22:04:20, Dec 25 2022
 > 
-> 记录到的interrupt/exception log
-> Exception return from AArch64 EL3 to AArch64 EL1 PC 0xe01b000
-> Taking exception 13 [Secure Monitor Call] on CPU 0
-> ...from EL1 to EL3
-> ...with ESR 0x17/0x5e000000
-> ...with ELR 0xe01d4b4
-> ...to EL3 PC 0x3400 PSTATE 0x3cd
-> Exception return from AArch64 EL3 to AArch64 EL3 PC 0xe040000
-> Taking exception 4 [Data Abort] on CPU 0
-> ...from EL3 to EL3
-> ...with ESR 0x25/0x96000010
-> ...with FAR 0x800ffe8
-> ...with ELR 0xe04212c
+> 记录到的interrupt/exception log\
+> Exception return from AArch64 EL3 to AArch64 EL1 PC 0xe01b000\
+> Taking exception 13 [Secure Monitor Call] on CPU 0\
+> ...from EL1 to EL3\
+> ...with ESR 0x17/0x5e000000\
+> ...with ELR 0xe01d4b4\
+> ...to EL3 PC 0x3400 PSTATE 0x3cd\
+> Exception return from AArch64 EL3 to AArch64 EL3 PC 0xe040000\
+> Taking exception 4 [Data Abort] on CPU 0\
+> ...from EL3 to EL3\
+> ...with ESR 0x25/0x96000010\
+> ...with FAR 0x800ffe8\
+> ...with ELR 0xe04212c\
 > ...to EL3 PC 0xe046000 PSTATE 0x3cd
 
 ```bash
@@ -85,14 +85,14 @@ qemu-system-aarch64 -nographic \
 	-bios bl1.bin -semihosting-config enable=on,target=native \
 	-d int -D ./test.txt
 ```
-> BL2报错
-> NOTICE:  Booting Trusted Firmware
-> NOTICE:  BL1: v2.5(release):ca4f1fc
-> NOTICE:  BL1: Built : 22:04:20, Dec 25 2022
-> NOTICE:  BL1: Booting BL2
-> NOTICE:  BL2: v2.5(release):ca4f1fc
-> NOTICE:  BL2: Built : 22:04:20, Dec 25 2022
-> ERROR:   BL2: Failed to load image id 4 (-2)
+> BL2报错\
+> NOTICE:  Booting Trusted Firmware\
+> NOTICE:  BL1: v2.5(release):ca4f1fc\
+> NOTICE:  BL1: Built : 22:04:20, Dec 25 2022\
+> NOTICE:  BL1: Booting BL2\
+> NOTICE:  BL2: v2.5(release):ca4f1fc\
+> NOTICE:  BL2: Built : 22:04:20, Dec 25 2022\
+> ERROR:   BL2: Failed to load image id 4 (-2)\
 > 
 > log有点多就不放了
 

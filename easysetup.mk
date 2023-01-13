@@ -8,6 +8,16 @@ mkflash:
 qemustart:
 	qemu-system-aarch64 -nographic \
                 -smp 4 \
+                -machine virt,secure=on,mte=off,gic-version=3,virtualization=on \
+                -cpu max,sve=off \
+                -d int -D ./int.log \
+                -m 3054,slots=1,maxmem=4G \
+                -bios flash.bin \
+                -initrd rootfs.cpio.gz \
+                -kernel Image -no-acpi
+qemustartwithmonitor:
+	qemu-system-aarch64 -nographic \
+                -smp 4 \
 		-monitor tcp:localhost:1234,server,nowait \
                 -machine virt,secure=on,mte=off,gic-version=3,virtualization=on \
                 -cpu max,sve=off \

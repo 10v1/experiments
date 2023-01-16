@@ -5,7 +5,7 @@ git clone 'https://gitlab.com/qemu-project/qemu.git'
 cd qemu
 git checkout v7.0.0
 
-# after fix icv_access bug
+# after fix icv_access bug and patch virt.c/virt.h
 mkdir build
 
 # install binaries in install path
